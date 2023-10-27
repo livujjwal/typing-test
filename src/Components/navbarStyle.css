@@ -1,0 +1,79 @@
+.navbar{
+    padding: 28px;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
+   gap: 20px;
+}
+.timer{
+    padding: 20x;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+.setTimer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.setTimer button{
+    background-color: black;
+    width: 28px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+.userInput{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 55vw;
+    height: 40vh;
+}
+.userInput::placeholder{
+    color: grey;
+}
+.setting{
+    padding: 20px;
+    gap: 20px;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+   
+}
+.reset{
+    justify-self: center;
+} 
+.words{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.words button,p button{
+    width: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+   
+}
+p{
+    padding-inline: 4px;
+}
+span{
+    font-weight: 500;
+    font-size: 18px;
+    padding-inline: 4px;
+    
+}

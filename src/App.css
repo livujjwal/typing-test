@@ -1,0 +1,51 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+.App{
+  text-align: center;
+}
+.icons{
+  display: flex;
+  align-items: center;
+}
+.icons a{
+  color: blue;
+  object-fit: cover;
+  width: 20px;
+}
+
+.footer{
+  padding-top: 50px;
+  width: 60vw;
+  margin: 20px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme{
+  background-color: #fff;
+  color: #000;
+
+}
+.theme::placeholder{
+  background-color: #fff;
+  color: #fff;
+}
+button{
+  background-color: #fff;
+  border: none;
+  padding: 5px;
+  box-sizing: border-box;
+  color: #000;
+  gap: 10px;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #000;
+}
