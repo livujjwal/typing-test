@@ -1,4 +1,5 @@
-import CreatableSelect from "react-select/creatable";
+import Select from "react-select";
+import themeOptions from "../Data/theme";
 import {
   FaSquareInstagram,
   FaSquareGithub,
@@ -6,39 +7,33 @@ import {
   FaLinkedin,
   FaAngleUp,
 } from "react-icons/fa6";
-const theme = [
-  { value: "dark", label: "Dark" },
-  { value: "white", label: "White" },
-];
+import { useState } from "react";
+import { useTheme } from "../Context/ThemeProvider";
+
 const Footer = () => {
+const [value,setValue] = useState()
+const {setTheme} = useTheme
+  function handleChange(event){
+    setValue(event.value)
+    setTheme(event.value)
+console.log(event);
+  }
   return (
     <div className="footer">
       <div className="icons">
-        <a>
-          <FaLinkedin />
-        </a>
-        <a>
-          <FaSquareInstagram />
-        </a>
-        <a>
-          <FaSquareTwitter />
-        </a>
-        <a>
-          <FaSquareGithub />
-        </a>
+        <FaLinkedin />
+        <FaSquareInstagram />
+        <FaSquareTwitter />
+        <FaSquareGithub />
       </div>
       <div>
-        <CreatableSelect
-          isClearable
-          options={theme}
-          styles={{
-            control: (baseStyles, state) => ({
-              ...baseStyles,
-              borderColor: state.isFocused ? "grey" : "red",
-            }),
-          }}
+        <Select
+          value={value}
+          onChange={handleChange}
+          options={themeOptions}
           placeholder="Select Theme"
-        ></CreatableSelect>
+          menuPlacement="top"
+        ></Select>
       </div>
     </div>
   );
